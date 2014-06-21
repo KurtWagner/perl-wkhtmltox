@@ -1,4 +1,4 @@
-perl-wkhtmltox / WKHTMLTOX::XXS
+perl-wkhtmltox / WKHTMLTOX::XS
 =========================
 
 Generate PDF and Images from HTML using WKHTMLTOX. e.g, for PDF
@@ -30,16 +30,18 @@ or for an image,
 
 2. Install required dependencies
 
-    
+    ```
     # yum install qt urw-fonts gcc-c++ libXext libXrender
+    ```
 
 3. Install this module, e.g:
 
-
+    ```
     $ perl Makefile.PL
     $ make
     $ make test
     # make install
+    ```
 
 #### GLOBAL & OBJECT SETTINGS
  
