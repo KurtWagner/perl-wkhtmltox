@@ -17,7 +17,7 @@ dies_ok { WKHTMLTOX::XS::generate_pdf({},''); } 'Expecting die';
 dies_ok { WKHTMLTOX::XS::generate_pdf(@{[]},{}); } 'Expecting die';
 dies_ok { WKHTMLTOX::XS::generate_pdf({},@{[]}); } 'Expecting die';
 
-generate_pdf({out => 't/test_a.pdf'},{page => "http://www.google.com"});
-generate_pdf({out => 't/test_b.pdf'},{page => "/data/affinitylive_api/modules/AffinityLive/XS/WKHTMLTOX/t/test.html"});
+#lives_ok { generate_pdf({out => 't/test_a.pdf'},{page => "http://www.google.com"}) } 'Expecting to live';
+lives_ok { generate_pdf({out => 't/test_b.pdf'},{page => "t/test.html"}) } 'Expecting to live';
 
 done_testing();
