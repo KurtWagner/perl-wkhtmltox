@@ -74,7 +74,7 @@ void generate_pdf (SV * global_options, SV * options)
 	wkhtmltopdf_add_object(c, os, NULL);
 
 	if (!wkhtmltopdf_convert(c)) {
-		croak("Convertion failed!");
+		croak("Conversion failed");
 	}
 
 	wkhtmltopdf_destroy_converter(c);
@@ -114,7 +114,7 @@ void generate_image (SV * global_options)
 	wkhtmltoimage_set_warning_callback(c, _image_warning);
 
 	if (!wkhtmltoimage_convert(c)) {
-		croak("Convertion failed!");
+		croak("Conversion failed");
 	}
 
 	wkhtmltoimage_destroy_converter(c);
